@@ -1,0 +1,97 @@
+/* Estilos del contenedor principal de login */
+.login-container {
+  background-color: #f9f9f9; /* Fondo claro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 2rem; /* Espaciado interior */
+  max-width: 400px; /* Ancho máximo del contenedor */
+  margin: 10% auto; /* Centrado horizontal y margen superior */
+  text-align: center; /* Texto centrado */
+}
+
+/* Estilo para el título del formulario */
+.login-container h2 {
+  font-size: 1.5rem; /* Tamaño de fuente */
+  margin-bottom: 1.5rem; /* Espaciado debajo del título */
+  color: #000000; /* Color del texto */
+}
+
+/* Estilo para los inputs */
+.login-container input {
+  width: 100%; /* Ancho completo del input */
+  padding: 0.75rem; /* Espaciado interno */
+  margin-bottom: 1rem; /* Espaciado inferior entre los campos */
+  border: 1px solid #ccc; /* Borde del input */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  outline: none; /* Sin borde al enfocar */
+  transition: border-color 0.2s ease-in-out; /* Transición suave en el borde */
+}
+
+/* Cambia el borde cuando el input está enfocado */
+.login-container input:focus {
+  border-color: #942AE5; /* Borde morado al enfocar */
+}
+
+/* Estilo para el botón de envío */
+.login-container button {
+  width: 100%; /* Ancho completo */
+  padding: 0.75rem; /* Espaciado interno */
+  background-color: #942AE5; /* Color de fondo morado */
+  color: white; /* Texto en blanco */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: bold; /* Fuente negrita */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor pointer */
+  transition: background-color 0.2s ease-in-out; /* Transición suave en el fondo */
+}
+
+/* Cambia el fondo cuando el botón es presionado */
+.login-container button:hover {
+  background-color: #6a1b9a; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilos para el grupo de inputs */
+.input-group {
+  margin-bottom: 20px;
+  position: relative; /* Para posicionar los íconos correctamente */
+}
+
+/* Estilo para el ícono de mostrar/ocultar contraseña */
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Espaciado a la derecha */
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px; /* Tamaño del ícono */
+  color: #6a1b9a; /* Color del ícono */
+}
+
+/* Estilo para el grupo de contraseña */
+.password-group {
+  position: relative; /* Para permitir la posición del ícono de la contraseña */
+}
+
+/* Estilo para el botón de inicio de sesión */
+.btn-login {
+  width: 100%;
+  padding: 10px;
+  background-color: #942AE5; /* Color de fondo morado */
+  color: #fff; /* Texto en blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor pointer */
+  transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+/* Cambia el fondo cuando el botón es presionado */
+.btn-login:hover {
+  background-color: #6a1b9a; /* Color más oscuro al pasar el ratón */
+}
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}

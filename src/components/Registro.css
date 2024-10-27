@@ -1,0 +1,57 @@
+/* Estilo general del contenedor de registro */
+.registro-container {
+    width: 400px; /* Ancho del formulario */
+    padding: 20px; /* Espacio interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    background-color: #fff; /* Color de fondo */
+    text-align: center; /* Centramos el texto */
+    position: absolute; /* Posición absoluta para centrar */
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Corrección para centrar */
+  }
+  
+  /* Estilo de los inputs */
+  .registro-container input {
+    width: 100%; /* Input ocupa todo el contenedor */
+    padding: 12px; /* Espacio interno del input */
+    margin: 10px 0; /* Espaciado entre los inputs */
+    border: 1px solid #ccc; /* Borde del input */
+    border-radius: 4px; /* Borde redondeado */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+  }
+  
+  /* Estilo del botón de registro */
+  .registro-container button {
+    width: 100%; /* Botón ocupa todo el contenedor */
+    padding: 12px; /* Espacio interno */
+    margin: 10px 0; /* Espaciado */
+    background-color: #942AE5; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+  
+  .registro-container button:hover {
+    background-color: #942AE5; /* Cambia el color al pasar el cursor */
+  }
+  
+  /* Estilo del título del formulario */
+  .registro-container h2 {
+    margin-bottom: 20px; /* Separación inferior */
+    color: #333; /* Color del texto */
+  }
+  
+  /* Estilo para mantener el formulario centrado en pantallas más pequeñas */
+  @media screen and (max-width: 600px) {
+    .registro-container {
+      width: 90%; /* Reduce el tamaño del contenedor en pantallas pequeñas */
+      padding: 10px; /* Reduce el padding */
+    }
+  
+    .registro-container input, .registro-container button {
+      font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+  }

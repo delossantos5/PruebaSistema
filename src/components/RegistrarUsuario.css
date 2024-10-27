@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+:root {
+  --color-primary: #a85edc;
+  --color-danger: #FF0060;
+  --color-success: #1B9C85;
+  --color-warning: #F7D060;
+  --color-white: #fff;
+  --color-info-dark: #514e54;
+  --color-dark: #363949;
+  --color-light: rgba(179, 104, 231, 0.34);
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-light);
+  font-weight: bold;
+  color: var(--color-dark);
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  color: var(--color-dark);
+  background-color: var(--color-background);
+}
+
+.contenedor-asientoContable {
+  background-color: white;
+  border-radius: 15px;
+  width: 150vh; /* Puedes ajustar el ancho según tus necesidades */
+  max-height: 500px; /* Ajusta la altura máxima según tus necesidades */
+  overflow-y: auto; /* Activa el scroll vertical */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Distribuye los elementos verticalmente */
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 6rem;
+  padding: 1rem; /* Agrega un poco de espacio interno */
+}
+.contenedor-asientoContable h2 {
+  margin: 0 0 1.5rem;
+  font-size: 2rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+input:focus, select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+.button-container button {
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #8c5db6;
+}
+
+.button-container button:active {
+  background-color: #6c3db0;
+}
+.tabla-scroll {
+  max-height: 300px; /* Ajusta la altura máxima según tus necesidades */
+  overflow-y: auto; /* Activa el scroll vertical */
+  width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+}
+.Hola{
+    background-color: white;
+    border-radius: 15px;
+    width: 150vh; /* Puedes ajustar el ancho según tus necesidades */
+    max-height: 500px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto; /* Activa el scroll vertical */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Distribuye los elementos verticalmente */
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 6rem;
+    padding: 1rem; /* Agrega un poco de espacio interno */
+    }
