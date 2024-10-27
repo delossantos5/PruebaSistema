@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
+:root{
+  --color-primary: #a85edc;
+  --color-danger: #FF0060;
+  --color-success: #1B9C85;
+  --color-warning: #F7D060;
+  --color-white: #fff;
+  --color-info-dark: #514e54;
+  --color-dark: #363949;
+  --color-light: rgba(179, 104, 231, 0.34);
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-mode-variables{
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(255, 255, 255, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 14px;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  user-select: none;
+  overflow-x: hidden;
+  color: var(--color-dark);
+  background-color: var(--color-background);
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5rem; /* Puedes ajustar la altura si es necesario */
+  width: 100vw;
+  background-color: var(--color-primary); /* Color violeta */
+  z-index: 2; /* Asegura que quede por encima de otros elementos */
+}
+
+
+a{
+  color: var(--color-dark);
+}
+
+img{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+h1{
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2{
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+h3{
+  font-weight: 500;
+  font-size: 0.87rem;
+}
+
+small{
+  font-size: 0.76rem;
+}
+
+p{
+  color: var(--color-dark-variant);
+}
+
+b{
+  color: var(--color-dark);
+}
+
+.text-muted{
+  color: var(--color-info-dark);
+}
+
+.primary{
+  color: var(--color-primary);
+}
+
+.danger{
+  color: var(--color-danger);
+}
+
+.success{
+  color: var(--color-success);
+}
+
+.warning{
+  color: var(--color-warning);
+}
+
+.container{
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 20rem auto 40rem;
+}
+
+aside{
+  height: 100vh;
+}
+
+aside .toggle{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+aside .toggle .logo {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  z-index: 4;
+}
+
+aside .toggle .logo img {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  top: -0.1rem;
+}
+
+aside .toggle .logo h2 {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+aside .toggle .close{
+  padding-right: 1rem;
+  display: none;
+}
+
+aside .sidebar{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  border-radius: 15px;
+  height: 80vh;
+  position: relative;
+  top: 2rem;
+  transition: all 0.3s ease;
+}
+
+aside .sidebar:hover{
+  box-shadow: none;
+}
+
+aside .sidebar a{
+  display: flex;
+  align-items: center;
+  color: var(--color-info-dark);
+  height: 5rem;
+  gap: 1rem;
+  position: relative;
+  margin-left: 2rem;
+  transition: all 0.3s ease;
+}
+
+aside .sidebar a span{
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child{
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+
+aside .sidebar a.active{
+  width: 100%;
+  color: var(--color-primary);
+  background-color: var(--color-light);
+  margin-left: 0;
+  border-radius: 15px;
+}
+
+aside .sidebar a.active::before{
+  content: '';
+  width: 6px;
+  height: 18px;
+  background-color: var(--color-primary);
+}
+
+aside .sidebar a.active span{
+  color: var(--color-primary);
+  margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover{
+  color: var(--color-primary);
+}
+
+aside .sidebar a:hover span{
+  margin-left: 0.6rem;
+}
+
+aside .sidebar .message-count{
+  background-color: var(--color-danger);
+  padding: 2px 6px;
+  color: var(--color-white);
+  font-size: 11px;
+  border-radius: var(--border-radius-1);
+}
+/* Cambiar el color de fondo al pasar el mouse */
+.sidebar a:hover {
+  background-color: var(--color-light); /* Color más oscuro al hacer hover */
+  color: var(--color-primary); /* Cambia el texto a blanco si lo deseas */
+}
+
+/* Mantener el color oscuro al hacer clic */
+.sidebar a:active,
+.sidebar a.clicked {
+  background-color:var(--color-light); /* Color oscuro cuando está activo */
+  color:var(--color-primary);
+}
+
+
+@media screen and (max-width: 1200px) {
+  .container{
+    width: 95%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+
+  aside .logo h2{
+    display: none;
+  }
+
+  aside .sidebar h3{
+    display: none;
+  }
+
+  aside .sidebar a{
+    width: 5.6rem;
+  }
+
+  aside .sidebar a:last-child{
+    position: relative;
+    margin-top: 1.8rem;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 0 var(--padding-1);
+  }
+
+  aside {
+    position: fixed;
+    background-color: var(--color-white);
+    width: 15rem;
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    height: 100vh;
+    left: -100%;
+    display: none;
+    animation: showMenu 0.4s ease forwards;
+  }
+
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+
+  aside .logo {
+    margin-left: 1rem;
+  }
+
+  aside .logo h2 {
+    display: inline;
+  }
+
+  aside .sidebar h3 {
+    display: inline;
+  }
+
+  aside .sidebar a {
+    width: 100%;
+    height: 3.4rem;
+  }
+
+  aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 5rem;
+  }
+
+  aside .toggle .close {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+.main-container {
+  background-color: white;
+  border-radius: 15px;
+  width: 150vh; /* Puedes ajustar el ancho según tus necesidades */
+  height: 80vh; /* Ajusta la altura también si es necesario */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Distribuye los elementos verticalmente */
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 6rem;
+
+}
+
+.main-container h2 {
+  margin-top: 2rem; /* Desplazado desde la parte superior */
+  margin-bottom: -3rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #514e54;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* Espacio entre los botones */
+  width: 50%;
+  align-items: center;
+}
+
+.button-container button {
+  width: 90%;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: var(--color-primary); /* Violeta */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #8c5db6; /* Cambia el color en hover */
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: 7rem auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-container {
+    margin: 0;
+    width: 100%;
+  }
+}
+.Libro{
+  background-color: white;
+  border-radius: 15px;
+  width: 150vh; /* Puedes ajustar el ancho según tus necesidades */
+  max-height: 500px; /* Ajusta la altura máxima según tus necesidades */
+  overflow-y: auto; /* Activa el scroll vertical */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Distribuye los elementos verticalmente */
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 6rem;
+  padding: 1rem; /* Agrega un poco de espacio interno */
+}
+.fecha-selector-container {
+  border: 2px solid #000;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.fecha-selector-container label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.fecha-selector-container input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.fecha-selector-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fecha-selector-container button:hover {
+  background-color: #e0e0e0;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px; /* Espacio entre botones */
+  align-items: center;
+}
+
+.button-group button {
+  flex: 1;
+  margin: 0 5px; /* Espacio entre los botones */
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.limpiar-btn {
+  background-color: #f44336; /* Color rojo para limpiar */
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.limpiar-btn:hover, .generar-btn:hover {
+  opacity: 0.8; /* Añade un efecto hover */
+}
+.buscar{
+  background-color:#942AE5; /* Color rojo para limpiar */
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+/* From Uiverse.io by barisdogansutcu */ 
+.download-button {
+  position: relative;
+  border-width: 0;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.download-button .docs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 10px;
+  border-radius: 4px;
+  z-index: 1;
+  background-color: #242a35;
+  border: solid 1px #e8e8e82d;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.download {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 4px;
+  transform: translateY(0%);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover .download {
+  transform: translateY(100%);
+  background-color: #01e056;
+  border: solid 1px #01e0572d;
+}
+
+.download svg polyline,
+.download svg line {
+  animation: docs 1s infinite;
+}
+
+@keyframes docs {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-15%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
