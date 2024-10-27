@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/PruebaSistema/static/css/main.e80d6338.css",
+    "main.js": "/PruebaSistema/static/js/main.051c33c1.js",
+    "static/js/239.793e6197.chunk.js": "/PruebaSistema/static/js/239.793e6197.chunk.js",
+    "static/js/213.582e123f.chunk.js": "/PruebaSistema/static/js/213.582e123f.chunk.js",
+    "static/js/732.a82a0b80.chunk.js": "/PruebaSistema/static/js/732.a82a0b80.chunk.js",
+    "static/js/453.8de65114.chunk.js": "/PruebaSistema/static/js/453.8de65114.chunk.js",
+    "static/media/fa-solid-900.ttf": "/PruebaSistema/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
+    "static/media/fa-brands-400.ttf": "/PruebaSistema/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
+    "static/media/fa-solid-900.woff2": "/PruebaSistema/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
+    "static/media/fa-brands-400.woff2": "/PruebaSistema/static/media/fa-brands-400.bb8d5a145e22822103fb.woff2",
+    "static/media/fa-regular-400.ttf": "/PruebaSistema/static/media/fa-regular-400.17a6e1aebccdbaa39e78.ttf",
+    "static/media/fa-regular-400.woff2": "/PruebaSistema/static/media/fa-regular-400.bc3722686635b5f86132.woff2",
+    "static/media/fa-v4compatibility.ttf": "/PruebaSistema/static/media/fa-v4compatibility.0f6cb412603527bda691.ttf",
+    "static/media/fa-v4compatibility.woff2": "/PruebaSistema/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
+    "index.html": "/PruebaSistema/index.html",
+    "main.e80d6338.css.map": "/PruebaSistema/static/css/main.e80d6338.css.map",
+    "main.051c33c1.js.map": "/PruebaSistema/static/js/main.051c33c1.js.map",
+    "239.793e6197.chunk.js.map": "/PruebaSistema/static/js/239.793e6197.chunk.js.map",
+    "213.582e123f.chunk.js.map": "/PruebaSistema/static/js/213.582e123f.chunk.js.map",
+    "732.a82a0b80.chunk.js.map": "/PruebaSistema/static/js/732.a82a0b80.chunk.js.map",
+    "453.8de65114.chunk.js.map": "/PruebaSistema/static/js/453.8de65114.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e80d6338.css",
+    "static/js/main.051c33c1.js"
+  ]
+}
